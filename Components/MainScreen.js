@@ -8,16 +8,11 @@ import AddMediaTab from "./AppTabNavigator/AddMediaTab";
 import LikesTab from "./AppTabNavigator/LikesTab";
 import ProfileTab from "./AppTabNavigator/ProfileTab";
 
-
-
-
 class MainScreen extends Component{
 
     static navigationOptions = {
 
-        headerLeft: <Icon name="ios-camera" style={{ paddingLeft: 10 }} />,
-        title: "Instagram",
-        headerRight: <Icon style={{ paddingRight: 10 }} name="ios-send" />
+        header: null
     }
 
     render() {
@@ -50,7 +45,7 @@ export default MainScreen
 const AppBottomTabNavigator = createMaterialTopTabNavigator({
 
     Home: {
-        screen: HomeTab
+        screen: ProfileTab
     },
     Search: {
         screen: SearchTab
@@ -62,7 +57,7 @@ const AppBottomTabNavigator = createMaterialTopTabNavigator({
         screen: LikesTab
     },
     Profile: {
-        screen: ProfileTab
+        screen: HomeTab
     }
 
 },{
