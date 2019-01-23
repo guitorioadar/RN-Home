@@ -29,12 +29,15 @@ class HomeTab extends Component {
                             paddingHorizontal: 7
                         }}>
                             <Text>Stories</Text>
-                            <Text>Watch All</Text>
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                <Icon name='md-play' style={{ fontSize: 14 }}/>
+                                <Text> Watch All </Text>
+                            </View>
                         </View>
                         <View style={{ flex: 3 }}>
                             <ScrollView
                             horizontal={true}
-                            showHorizontalScrollIdicator={false}>
+                            showsHorizontalScrollIndicator={false}>
                                 <Thumbnail
                                 style={{ marginHorizontal: 5, borderColor: 'pink', borderWidth: 2 }}
                                 source={require('./fjords.jpg')}/>
