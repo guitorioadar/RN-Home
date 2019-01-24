@@ -45,7 +45,7 @@ export default MainScreen
 const AppBottomTabNavigator = createMaterialTopTabNavigator({
 
     Home: {
-        screen: ProfileTab
+        screen: HomeTab
     },
     Search: {
         screen: SearchTab
@@ -57,7 +57,7 @@ const AppBottomTabNavigator = createMaterialTopTabNavigator({
         screen: LikesTab
     },
     Profile: {
-        screen: HomeTab
+        screen: ProfileTab
     }
 
 },{

@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {View, Text, StyleSheet, Platform, StatusBar, Image, Dimensions} from 'react-native'
-import {Container, Content, Icon, Button, Thumbnail, Header, Left, Right, Body} from 'native-base'
+import React, { Component } from 'react'
+import { View, Text, StyleSheet, Platform, StatusBar, Image, Dimensions } from 'react-native'
+import { Container, Content, Icon, Button, Thumbnail, Header, Left, Right, Body } from 'native-base'
 import EntypoIcon from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
@@ -19,7 +19,7 @@ var images = [
     require('../../assets/11.jpg')
 ]
 
-var {width,height}  = Dimensions.get('window')
+var {width, height} = Dimensions.get('window')
 
 class ProfileTab extends Component {
 
@@ -42,16 +42,19 @@ class ProfileTab extends Component {
     }
 
     renderSectionOne = () => {
-        return images.map((image,index) => {
-            return(
-                <View key={index}
-                style={[{
-                    width: (width)/3,
-                    height: (height)/3
-                }, index % 3 !==0 ? {paddingLeft:2} : { paddingLeft: 0}
+        return images.map((image, index) => {
+            return (
+                <View key={index} style={[
+                    {width: (width) / 3},
+                    {height: (width) / 3},
+                    {marginBottom: 2},
+                    index % 3 !== 0 ? {paddingLeft: 2} : {paddingLeft: 0}
                 ]}>
-                    <Image style={{flex:1,width:undefined,height:undefined}}
-                    source={image}/>
+                    <Image style={{
+                        flex: 1,
+                        width: undefined,
+                        height: undefined}}
+                           source={image}/>
                 </View>
             )
         })
@@ -92,6 +95,7 @@ class ProfileTab extends Component {
                 </Header>
 
                 <Content>
+
                     <View style={{paddingTop: 10}}>
                         <View style={{flexDirection: 'row'}}>
                             <View style={{flex: 1, alignItems: 'center'}}>
@@ -157,21 +161,27 @@ class ProfileTab extends Component {
                             <Button transparent
                                     onPress={() => this.segmentClicked(0)}
                                     active={this.state.activeIndex == 0}>
-                                <MaterialIcons name='apps' style={[{ fontSize: 32 }, this.state.activeIndex == 0 ? {} : { color: 'grey' }]}/>
+                                <MaterialIcons name='apps'
+                                               style={[{fontSize: 32}, this.state.activeIndex == 0 ? {} : {color: 'grey'}]}/>
                             </Button>
                             <Button onPress={() => this.segmentClicked(1)}
                                     transparent active={this.state.activeIndex == 1}>
-                                <MaterialIcons name='list' style={[{ fontSize: 32 }, this.state.activeIndex == 1 ? {} : { color: 'grey' }]}/>
+                                <MaterialIcons name='list'
+                                               style={[{fontSize: 32}, this.state.activeIndex == 1 ? {} : {color: 'grey'}]}/>
                             </Button>
                             <Button onPress={() => this.segmentClicked(2)}
                                     transparent active={this.state.activeIndex == 2}>
-                                <MaterialIcons name='people-outline' style={[{ fontSize: 32 }, this.state.activeIndex == 2 ? {} : { color: 'grey' }]}/>
+                                <MaterialIcons name='people-outline'
+                                               style={[{fontSize: 32}, this.state.activeIndex == 2 ? {} : {color: 'grey'}]}/>
                             </Button>
                             <Button onPress={() => this.segmentClicked(3)}
                                     transparent active={this.state.activeIndex == 3}>
-                                <MaterialIcons name='bookmark-border' style={[{ fontSize: 32 }, this.state.activeIndex == 3 ? {} : { color: 'grey' }]}/>
+                                <MaterialIcons name='bookmark-border'
+                                               style={[{fontSize: 32}, this.state.activeIndex == 3 ? {} : {color: 'grey'}]}/>
                             </Button>
                         </View>
+
+                        {/** Height =width/3 so that image sizes vary according to size of the phone yet remain squares **/}
 
                         {this.renderSection()}
 
