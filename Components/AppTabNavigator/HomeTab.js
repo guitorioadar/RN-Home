@@ -26,7 +26,7 @@ class HomeTab extends Component {
                     })
                 }}>
                     <Left><Icon name='ios-camera' style={{paddingLeft: 10}}/></Left>
-                    <Body><Text style={{fontWeight:"900", fontSize: 18}}>Instagram</Text></Body>
+                    <Body><Text style={{fontWeight:"900", fontSize: 18}}>VaidooPep</Text></Body>
                     <Right><Icon name='ios-send' style={{paddingRight: 10}}/></Right>
                 </Header>
 
