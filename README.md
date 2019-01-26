@@ -1,4 +1,4 @@
-VaidooPep is a social app designed with React Native , has similarities with Instagram
+VaidooPep is a social app designed with React Native which has similarities with Instagram
 # Home and Profile sections are desgined
 
 # # Home                                          # Profile
